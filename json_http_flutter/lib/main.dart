@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:json_http_flutter/views/local_json_view.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:json_http_flutter/views/dashboard_view.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.orange,
       ),
-      home: const LocalJsonView(),
+      home: const Dashboard(),
     );
   }
 }

@@ -10,7 +10,7 @@ class LocalJsonView extends StatefulWidget {
   State<LocalJsonView> createState() => _LocalJsonState();
 }
 
-late final Future<List<ArabaModel>> listeyiDoldur;
+late Future<List<ArabaModel>>? listeyiDoldur;
 
 class _LocalJsonState extends State<LocalJsonView> {
   @override
@@ -64,7 +64,7 @@ class _LocalJsonState extends State<LocalJsonView> {
     List<ArabaModel> tumArabalar = (jsonObject as List)
         .map((arabaMap) => ArabaModel.fromJson(arabaMap))
         .toList();
-    debugPrint(tumArabalar[0].model![0].modelAdi);
+
     return tumArabalar;
   }
 }
